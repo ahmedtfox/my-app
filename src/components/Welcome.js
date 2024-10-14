@@ -1,6 +1,7 @@
-function Greeting() {
+function Welcome(props) {
   return (
-    <div className="Greeting">
+    <div className="Welcome">
+      <h2>welcome {props.name}</h2>
       <h5>
         You can, however, create more top-level directories. They will not be
         included in the production build so you can use them for things like
@@ -10,4 +11,4 @@ function Greeting() {
   );
 }
 
-export default Greeting;
+export default Welcome;
