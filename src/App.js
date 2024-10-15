@@ -1,14 +1,14 @@
 import Greeting from "./components/Greeting";
 import Welcome from "./components/Welcome";
 import Button from "./components/Button";
-
+import Form from "./components/Form";
+import List from "./components/List";
 function App() {
   return (
     <div className="App">
-      <h1>welcome </h1>
-      <Greeting name="Sara" />
-
-      <Welcome name="ahmed" />
+      <Form />
+      <br />
+      <List />
     </div>
   );
 }
