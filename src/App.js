@@ -1,8 +1,26 @@
-import One from "./components/One";
+import Navbar from "./components/Navbar";
+import Slider from "./components/Slider";
+import ProductsList from "./components/ProductsList";
+import { Routes, Route } from "react-router-dom";
+import About from "./components/About";
+import ProductDetails from "./components/ProductDetails";
 function App() {
   return (
     <div className="App">
-      <One />
+      <Navbar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Slider />
+              <ProductsList />
+            </>
+          }
+        ></Route>
+        <Route path="about" element={<About />}></Route>
+        <Route path="product/:productId" element={<ProductDetails />}></Route>
+      </Routes>
     </div>
   );
 }

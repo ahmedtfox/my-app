@@ -1,15 +1,27 @@
-import "./Product.css";
+import { Link, useParams } from "react-router-dom";
 
 function Product(props) {
-  const p = props.product;
+  const { product, showBtn } = props;
   return (
-    <div className="card">
-      <h3>{p.title}</h3>
-      <img src={p.image} alt="d"></img>
-      <h4>{p.category}</h4>
-      <h3>{p.price}</h3>
-      <p>{p.description}</p>
-    </div>
+    <>
+      <div className="card mb-5">
+        <img src={product.image} className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">{product.title}</h5>
+          <h6 className="card-text">${product.price}</h6>
+          <p className="card-text">{product.description}</p>
+          {showBtn ? (
+            <Link
+              to={`/product/${product.id}`}
+              type="Button"
+              className="btn btn-primary"
+            >
+              Details
+            </Link>
+          ) : null}
+        </div>
+      </div>
+    </>
   );
 }
 
