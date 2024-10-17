@@ -35,6 +35,15 @@ function Navbar() {
                   About
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/add-product"
+                >
+                  Add Product
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

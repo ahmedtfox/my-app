@@ -4,7 +4,7 @@ import Product from "./Product";
 function ProductDetails() {
   const prams = useParams();
 
-  const api_URL = "https://fakestoreapi.com/products/" + prams.productId;
+  const api_URL = "http://localhost:3344/products/" + prams.productId;
   const [data, setData] = useState([]);
 
   useEffect(() => {

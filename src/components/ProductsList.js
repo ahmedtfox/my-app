@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Product from "./Product";
 
 function ProductsList() {
-  const api_URL = "https://fakestoreapi.com/products";
+  const api_URL = "http://localhost:3344/products";
 
   const [data, setData] = useState([]);
   let list = data.map((p, index) => {

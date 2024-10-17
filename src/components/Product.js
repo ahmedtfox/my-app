@@ -12,9 +12,9 @@ function Product(props) {
           <p className="card-text">{product.description}</p>
           {showBtn ? (
             <Link
-              to={`/product/${product.id}`}
+              to={`/products/${product.id}`}
               type="Button"
-              className="btn btn-primary"
+              className="btn btn-primary btn-sm"
             >
               Details
             </Link>
