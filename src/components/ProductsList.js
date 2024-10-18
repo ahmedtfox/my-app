@@ -30,7 +30,9 @@ function ProductsList() {
     <>
       <h2 className="text-center p-3">Our Products</h2>
       <div className="container">
-        <div className="row">{list}</div>
+        <div className="row">
+          {list.length > 0 ? list : <h2>No Products</h2>}
+        </div>
       </div>
     </>
   );

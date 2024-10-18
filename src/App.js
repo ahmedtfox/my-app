@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import ProductDetails from "./components/ProductDetails";
 import AddProduct from "./components/AddProduct";
+import ProductsProvider from "./components/context/ProductsContext";
 function App() {
   return (
     <div className="App">
@@ -13,6 +14,11 @@ function App() {
           <div className="col">
             <Navbar />
           </div>
+        </div>
+        <div className="row">
+          <ProductsProvider>
+            <About/>
+          </ProductsProvider>
         </div>
       </div>
       <Routes>
